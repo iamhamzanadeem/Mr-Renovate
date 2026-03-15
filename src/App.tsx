@@ -5,6 +5,12 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { AnimatePresence, motion } from "framer-motion";
 import Index from "./pages/Index.tsx";
+import About from "./pages/About.tsx";
+import Services from "./pages/Services.tsx";
+import ServiceDetail from "./pages/ServiceDetail.tsx";
+import Gallery from "./pages/Gallery.tsx";
+import Contact from "./pages/Contact.tsx";
+import GetStarted from "./pages/GetStarted.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
