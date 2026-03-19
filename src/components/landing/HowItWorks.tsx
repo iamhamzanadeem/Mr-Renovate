@@ -1,5 +1,3 @@
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
 import ScrollReveal from "../animations/ScrollReveal";
 import TextReveal from "../animations/TextReveal";
 import { ClipboardList, Users, Hammer } from "lucide-react";
@@ -26,18 +24,11 @@ const steps = [
 ];
 
 const HowItWorks = () => {
-  const sectionRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start 0.8", "end 0.6"],
-  });
-  const pathLength = useTransform(scrollYProgress, [0, 1], [0, 1]);
-
   return (
-    <section ref={sectionRef} className="py-24 lg:py-32 bg-background relative overflow-hidden">
+    <section className="py-24 lg:py-32 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-16">
           <ScrollReveal>
             <span className="text-sm font-body font-semibold text-accent uppercase tracking-widest">How It Works</span>
           </ScrollReveal>
@@ -50,50 +41,34 @@ const HowItWorks = () => {
           />
         </div>
 
-        {/* Steps with connecting SVG line */}
-        <div className="relative max-w-4xl mx-auto">
-          {/* SVG connecting line — desktop only */}
-          <svg className="hidden lg:block absolute left-1/2 top-0 h-full w-2 -translate-x-1/2" viewBox="0 0 2 100" preserveAspectRatio="none">
-            <motion.line
-              x1="1" y1="0" x2="1" y2="100"
-              stroke="hsl(var(--gold))"
-              strokeWidth="2"
-              strokeDasharray="4 4"
-              style={{ pathLength }}
-              className="will-change-transform"
-            />
-          </svg>
+        {/* Step bar indicator */}
+        <div className="relative flex items-start justify-between max-w-xl mx-auto mb-16 px-4">
+          {/* Connecting line */}
+          <div className="absolute left-[calc(16.67%+24px)] right-[calc(16.67%+24px)] top-6 h-px bg-accent/30" />
+          {steps.map((step, i) => (
+            <ScrollReveal key={step.number} delay={i * 0.15} className="flex flex-col items-center gap-2 z-10">
+              <div className="w-12 h-12 rounded-full bg-background border-2 border-accent flex items-center justify-center shadow-sm">
+                <span className="text-accent font-bold font-display text-sm">{step.number}</span>
+              </div>
+              <span className="text-xs font-body text-muted-foreground text-center leading-tight max-w-[80px]">
+                {step.title}
+              </span>
+            </ScrollReveal>
+          ))}
+        </div>
 
+        {/* Step cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           {steps.map((step, i) => {
             const Icon = step.icon;
-            const isEven = i % 2 === 0;
             return (
-              <ScrollReveal
-                key={step.number}
-                delay={i * 0.2}
-                direction={isEven ? "left" : "right"}
-                className="mb-16 last:mb-0"
-              >
-                <div className={`flex flex-col lg:flex-row items-center gap-8 ${isEven ? "" : "lg:flex-row-reverse"}`}>
-                  <div className={`flex-1 ${isEven ? "lg:text-right" : "lg:text-left"}`}>
-                    <motion.span
-                      initial={{ scale: 0.5, rotate: 10, opacity: 0 }}
-                      whileInView={{ scale: 1, rotate: 0, opacity: 0.1 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.6, delay: i * 0.15 }}
-                      className="text-8xl font-display font-bold text-accent block leading-none"
-                    >
-                      {step.number}
-                    </motion.span>
-                    <h3 className="text-2xl font-display font-bold text-foreground mt-2">{step.title}</h3>
-                    <p className="mt-3 text-muted-foreground font-body leading-relaxed max-w-md inline-block">
-                      {step.description}
-                    </p>
+              <ScrollReveal key={step.number} delay={i * 0.2}>
+                <div className="flex flex-col items-center text-center p-8 rounded-2xl bg-accent/5 border border-accent/10 hover:border-accent/30 hover:bg-accent/10 transition-colors duration-300 h-full">
+                  <div className="w-16 h-16 rounded-2xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-5">
+                    <Icon className="w-8 h-8 text-accent" />
                   </div>
-                  <div className="relative z-10 w-20 h-20 rounded-2xl bg-accent/10 border border-accent/20 flex items-center justify-center shrink-0">
-                    <Icon className="w-10 h-10 text-accent" />
-                  </div>
-                  <div className="flex-1 hidden lg:block" />
+                  <h3 className="text-xl font-display font-bold text-foreground mb-3">{step.title}</h3>
+                  <p className="text-muted-foreground font-body leading-relaxed text-sm">{step.description}</p>
                 </div>
               </ScrollReveal>
             );
