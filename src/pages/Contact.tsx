@@ -1,4 +1,5 @@
 import { useState } from "react";
+import api from "@/lib/api";
 import { motion } from "framer-motion";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/landing/Footer";
@@ -37,7 +38,9 @@ const Contact = () => {
     setErrors((prev) => ({ ...prev, [e.target.name]: "" }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const result = contactSchema.safeParse(form);
     if (!result.success) {
@@ -48,8 +51,16 @@ const Contact = () => {
       setErrors(fieldErrors);
       return;
     }
-    setSubmitted(true);
-    toast({ title: "Message sent!", description: "We'll get back to you within 24 hours." });
+    setSubmitting(true);
+    try {
+      await api.post('/contact', form);
+      setSubmitted(true);
+      toast({ title: "Message sent!", description: "We'll get back to you within 24 hours." });
+    } catch {
+      toast({ title: "Something went wrong", description: "Please try again or contact us on WhatsApp.", variant: "destructive" });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const whatsappLink = `https://wa.me/97141234567?text=${encodeURIComponent("Hi Mr Renovate, I'd like to discuss a renovation project.")}`;
@@ -138,8 +149,8 @@ const Contact = () => {
                         <Textarea name="message" placeholder="Tell us about your project... *" value={form.message} onChange={handleChange} className="bg-secondary border-border focus:border-accent min-h-[150px]" />
                         {errors.message && <p className="text-destructive text-xs mt-1 font-body">{errors.message}</p>}
                       </div>
-                      <Button type="submit" className="bg-accent text-accent-foreground hover:bg-gold-light px-8 py-3 font-body font-semibold">
-                        <Send className="w-4 h-4 mr-2" /> Send Message
+                      <Button type="submit" disabled={submitting} className="bg-accent text-accent-foreground hover:bg-gold-light px-8 py-3 font-body font-semibold">
+                        <Send className="w-4 h-4 mr-2" /> {submitting ? 'Sending…' : 'Send Message'}
                       </Button>
                     </form>
                   )}

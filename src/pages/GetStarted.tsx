@@ -1,4 +1,5 @@
 import { useState } from "react";
+import api from "@/lib/api";
 import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/landing/Footer";
@@ -90,9 +91,24 @@ const GetStarted = () => {
     if (step < 3) setStep(step + 1);
   };
 
-  const handleSubmit = () => {
-    setSubmitted(true);
-    toast({ title: "Request submitted!", description: "We'll call you within 24 hours with your free quote." });
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = async () => {
+    setSubmitting(true);
+    try {
+      await api.post('/quotes', {
+        ...form,
+        services: selectedServices,
+        budget,
+        timeline,
+      });
+      setSubmitted(true);
+      toast({ title: "Request submitted!", description: "We'll call you within 24 hours with your free quote." });
+    } catch {
+      toast({ title: "Something went wrong", description: "Please try again or contact us on WhatsApp.", variant: "destructive" });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -277,8 +293,8 @@ const GetStarted = () => {
                           <div className="flex justify-between"><span className="text-muted-foreground">Location</span><span className="text-foreground font-semibold">{form.location}</span></div>
                         </div>
                       </div>
-                      <Button onClick={handleSubmit} className="bg-accent text-accent-foreground hover:bg-gold-light px-10 py-3 font-body font-semibold text-base animate-pulse-glow">
-                        <Phone className="w-4 h-4 mr-2" /> Submit & Get Free Quote
+                      <Button onClick={handleSubmit} disabled={submitting} className="bg-accent text-accent-foreground hover:bg-gold-light px-10 py-3 font-body font-semibold text-base animate-pulse-glow">
+                        <Phone className="w-4 h-4 mr-2" /> {submitting ? 'Submitting…' : 'Submit & Get Free Quote'}
                       </Button>
                     </div>
                   )}
