@@ -20,7 +20,7 @@ const contactSchema = z.object({
 });
 
 const contactInfo = [
-  { icon: Phone, label: "Call Us", value: "+971 4 123 4567", href: "tel:+97141234567" },
+  { icon: Phone, label: "Call Us", value: "+971 55 595 9267", href: "tel:+971555959267" },
   { icon: Mail, label: "Email Us", value: "info@mrrenovate.ae", href: "mailto:info@mrrenovate.ae" },
   { icon: MapPin, label: "Visit Us", value: "Al Quoz Industrial 3, Dubai, UAE", href: "#map" },
   { icon: Clock, label: "Working Hours", value: "Sun–Thu: 8AM – 6PM | Sat: 9AM – 2PM", href: undefined },
@@ -52,7 +52,7 @@ const Contact = () => {
     toast({ title: "Message sent!", description: "We'll get back to you within 24 hours." });
   };
 
-  const whatsappLink = `https://wa.me/97141234567?text=${encodeURIComponent("Hi Mr Renovate, I'd like to discuss a renovation project.")}`;
+  const whatsappLink = `https://wa.me/971555959267?text=${encodeURIComponent("Hi Mr Renovate, I'd like to discuss a renovation project.")}`;
 
   return (
     <>
