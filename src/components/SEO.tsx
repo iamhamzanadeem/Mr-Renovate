@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
 
 interface SEOProps {
   title: string;
@@ -11,6 +12,8 @@ export default function SEO({
   description,
   keywords,
 }: SEOProps) {
+  
+  const location = useLocation();
   return (
     <Helmet>
       <title>{title}</title>
@@ -19,8 +22,8 @@ export default function SEO({
 
       {keywords && (
         <meta
-          name="keywords"
-          content={keywords}
+         name="keywords"
+         content="home renovation dubai, home renovation company dubai, kitchen renovation dubai, bathroom renovation dubai, villa renovation dubai"
         />
       )}
 
@@ -45,7 +48,7 @@ export default function SEO({
 
       <link
         rel="canonical"
-        href={window.location.href}
+        href={`https://mrrenovate.ae${location.pathname}`}
       />
     </Helmet>
   );

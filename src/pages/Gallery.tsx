@@ -34,6 +34,10 @@ const Gallery = () => {
 
   return (
     <>
+    <SEO
+      title="Renovation Gallery | Mr Renovate Dubai"
+      description="Browse our completed kitchen, bathroom and home renovation projects across Dubai."
+     />
       <Navbar />
       <main>
         {/* Hero */}
