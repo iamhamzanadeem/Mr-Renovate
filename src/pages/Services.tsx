@@ -67,6 +67,10 @@ const services = [
 const Services = () => {
   return (
     <>
+      <SEO
+       title="Home Renovation Services in Dubai | Mr Renovate"
+       description="Professional kitchen renovation, bathroom remodeling, flooring, painting and complete renovation services in Dubai."
+      />
       <Navbar />
       <main>
         {/* Hero */}
