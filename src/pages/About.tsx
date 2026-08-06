@@ -52,6 +52,10 @@ const milestones = [
 const About = () => {
   return (
     <>
+     <SEO
+        title="About Mr Renovate | Home Renovation Company in Dubai"
+        description="Learn about Mr Renovate, Dubai's trusted renovation company providing kitchen, bathroom, flooring and complete home renovation services."
+      />
       <Navbar />
       <main>
         {/* Hero */}
