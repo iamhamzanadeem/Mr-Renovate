@@ -57,6 +57,10 @@ const Contact = () => {
 
   return (
     <>
+     <SEO
+      title="Contact Mr Renovate | Get a Free Quote"
+      description="Contact Mr Renovate for professional renovation services in Dubai. Request a free consultation today."
+    />
       <Navbar />
       <main>
         {/* Hero */}
