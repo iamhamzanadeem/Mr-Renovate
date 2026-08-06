@@ -7,6 +7,7 @@ import TextReveal from "@/components/animations/TextReveal";
 import { Bath, ChefHat, PaintBucket, Layers, TreePine, Wrench, CheckCircle, ArrowRight, Phone } from "lucide-react";
 import SEO from "@/components/SEO";
 
+
 const serviceData: Record<string, {
   icon: typeof ChefHat;
   title: string;
@@ -161,7 +162,12 @@ const ServiceDetail = () => {
 
   return (
     <>
-      <Navbar />
+      <SEO
+       title={`${service.title} | Home Renovation Dubai | Mr Renovate`}
+       description={service.description[0]}
+       keywords={`${service.title}, Home Renovation Dubai, Home Renovation Company Dubai`}
+     />
+      <Navbar /> 
       <main>
         {/* Hero */}
         <section className="relative min-h-[50vh] flex items-center bg-primary overflow-hidden">
