@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { ChefHat, Bath, PaintBucket, Layers, TreePine, Wrench, ArrowRight, ArrowLeft, CheckCircle, Phone, User, Calendar, DollarSign } from "lucide-react";
 import { z } from "zod";
+import SEO from "@/components/SEO";
 
 const serviceTypes = [
   { id: "kitchen", label: "Kitchen", icon: ChefHat },

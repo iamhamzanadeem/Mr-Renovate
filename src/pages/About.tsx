@@ -5,6 +5,7 @@ import ScrollReveal from "@/components/animations/ScrollReveal";
 import TextReveal from "@/components/animations/TextReveal";
 import AnimatedCounter from "@/components/animations/AnimatedCounter";
 import { Users, Award, Clock, Target, Heart, Shield, Eye, Gem } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const teamMembers = [
   {

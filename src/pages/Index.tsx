@@ -9,6 +9,7 @@ import Testimonials from "../components/landing/Testimonials";
 import TrustBadges from "../components/landing/TrustBadges";
 import CTASection from "../components/landing/CTASection";
 import Footer from "../components/landing/Footer";
+import SEO from "@/components/SEO";
 
 const Index = () => {
   const { scrollYProgress } = useScroll();

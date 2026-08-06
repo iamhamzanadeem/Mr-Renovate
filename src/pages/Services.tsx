@@ -5,6 +5,7 @@ import Footer from "@/components/landing/Footer";
 import ScrollReveal from "@/components/animations/ScrollReveal";
 import TextReveal from "@/components/animations/TextReveal";
 import { Bath, ChefHat, PaintBucket, Layers, TreePine, Wrench, ArrowRight, CheckCircle } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const services = [
   {

@@ -6,6 +6,8 @@ import Footer from "@/components/landing/Footer";
 import ScrollReveal from "@/components/animations/ScrollReveal";
 import TextReveal from "@/components/animations/TextReveal";
 import { X, ArrowRight } from "lucide-react";
+import SEO from "@/components/SEO";
+
 
 const categories = ["All", "Kitchen", "Bathroom", "Living Room", "Outdoor", "Full Villa"];
 
