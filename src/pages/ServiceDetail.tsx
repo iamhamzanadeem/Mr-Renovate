@@ -162,6 +162,7 @@ const ServiceDetail = () => {
   serviceType: service.title,
   name: service.title,
   description: service.description[0],
+  image: service.heroImage,
   provider: {
     "@type": "LocalBusiness",
     name: "Mr Renovate",
