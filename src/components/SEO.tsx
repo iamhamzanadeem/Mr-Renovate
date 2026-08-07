@@ -5,7 +5,7 @@ interface SEOProps {
   title: string;
   description: string;
   keywords?: string;
-  schema?: object;
+  schema?: object[];
 }
 
 export default function SEO({
@@ -45,9 +45,14 @@ export default function SEO({
         rel="canonical"
         href={`https://mrrenovate.ae${location.pathname}`}
       />
-      <script type="application/ld+json">
-       {JSON.stringify(schema)}
-      </script>
+      {schema?.map((item, index) => (
+  <script
+    key={index}
+    type="application/ld+json"
+  >
+    {JSON.stringify(item)}
+  </script>
+))}
     </Helmet>
   );
 }
