@@ -184,6 +184,7 @@ const ServiceDetail = () => {
        title={`${service.title} | Home Renovation Dubai | Mr Renovate`}
        description={service.description[0]}
        keywords={`${service.title}, Home Renovation Dubai, Home Renovation Company Dubai`}
+        schema={[serviceSchema]}
      />
       <Navbar /> 
       <main>
