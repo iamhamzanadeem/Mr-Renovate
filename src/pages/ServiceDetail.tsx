@@ -156,6 +156,24 @@ const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const service = slug ? serviceData[slug] : null;
 
+  const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: service.title,
+  name: service.title,
+  description: service.description[0],
+  provider: {
+    "@type": "LocalBusiness",
+    name: "Mr Renovate",
+    url: "https://mrrenovate.ae"
+  },
+  areaServed: {
+    "@type": "City",
+    name: "Dubai"
+  },
+  url: `https://mrrenovate.ae/services/${slug}`
+};
+
   if (!service) return <Navigate to="/services" replace />;
 
   const Icon = service.icon;
