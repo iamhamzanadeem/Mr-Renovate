@@ -31,20 +31,13 @@ export default function SEO({
 
       <meta property="og:title" content={title} />
 
-      <meta
-        property="og:description"
-        content={description}
-      />
+      <meta property="og:description" content={description} />
 
-      <meta
-        property="og:type"
-        content="website"
-      />
+      <meta property="og:type" content="website"/>
 
-      <meta
-        property="og:url"
-        content={window.location.href}
-      />
+      <meta property="og:url" content={`https://mrrenovate.ae${location.pathname}`} />
+
+      <meta property="og:image" content="https://mrrenovate.ae/og-image.jpg" />
 
       <link
         rel="canonical"
