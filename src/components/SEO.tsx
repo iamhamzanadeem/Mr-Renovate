@@ -5,12 +5,14 @@ interface SEOProps {
   title: string;
   description: string;
   keywords?: string;
+  schema?: object;
 }
 
 export default function SEO({
   title,
   description,
   keywords,
+  schema,
 }: SEOProps) {
   
   const location = useLocation();
@@ -43,6 +45,9 @@ export default function SEO({
         rel="canonical"
         href={`https://mrrenovate.ae${location.pathname}`}
       />
+      <script type="application/ld+json">
+       {JSON.stringify(schema)}
+      </script>
     </Helmet>
   );
 }
