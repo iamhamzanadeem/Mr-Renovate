@@ -12,6 +12,20 @@ import { ChefHat, Bath, PaintBucket, Layers, TreePine, Wrench, ArrowRight, Arrow
 import { z } from "zod";
 import SEO from "@/components/SEO";
 
+const getStartedSchema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  name: "Get a Free Renovation Quote | Mr Renovate",
+  url: "https://mrrenovate.ae/get-started",
+  description:
+    "Request a free quote from Mr Renovate for kitchen, bathroom, flooring, painting, landscaping and complete home renovation services in Dubai.",
+  mainEntity: {
+    "@type": "LocalBusiness",
+    name: "Mr Renovate",
+    url: "https://mrrenovate.ae/",
+  },
+};
+
 const serviceTypes = [
   { id: "kitchen", label: "Kitchen", icon: ChefHat },
   { id: "bathroom", label: "Bathroom", icon: Bath },
@@ -101,7 +115,8 @@ const GetStarted = () => {
       <SEO
        title="Get Started | Mr Renovate Dubai"
        description="Start your home renovation project with Mr Renovate. Get a free quote from our renovation experts."
-      />
+      schema={[getStartedSchema]}
+     />
       <Navbar />
       <main>
         {/* Hero */}
