@@ -25,6 +25,19 @@ const projects = [
   { id: 11, title: "Island Kitchen Build", category: "Kitchen", location: "Dubai Hills", image: "https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=800&q=80" },
   { id: 12, title: "Outdoor Entertainment Area", category: "Outdoor", location: "Damac Hills", image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80" },
 ];
+const gallerySchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Renovation Projects Gallery | Mr Renovate",
+  url: "https://mrrenovate.ae/gallery",
+  description:
+    "Explore renovation projects by Mr Renovate, including kitchen, bathroom, flooring, landscaping and complete home renovation projects in Dubai.",
+  about: {
+    "@type": "LocalBusiness",
+    name: "Mr Renovate",
+    url: "https://mrrenovate.ae/",
+  },
+};
 
 const Gallery = () => {
   const [active, setActive] = useState("All");

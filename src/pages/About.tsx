@@ -7,6 +7,28 @@ import AnimatedCounter from "@/components/animations/AnimatedCounter";
 import { Users, Award, Clock, Target, Heart, Shield, Eye, Gem } from "lucide-react";
 import SEO from "@/components/SEO";
 
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Mr Renovate",
+  url: "https://mrrenovate.ae/",
+  description:
+    "Mr Renovate is a home renovation company in Dubai providing kitchen, bathroom, flooring, painting, landscaping and complete renovation services.",
+};
+
+const aboutPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  name: "About Mr Renovate",
+  url: "https://mrrenovate.ae/about",
+  mainEntity: {
+    "@type": "Organization",
+    name: "Mr Renovate",
+    url: "https://mrrenovate.ae/",
+  },
+};
+
 const teamMembers = [
   {
     name: "Ahmed Al-Rashid",
@@ -55,6 +77,7 @@ const About = () => {
      <SEO
         title="About Mr Renovate | Home Renovation Company in Dubai"
         description="Learn about Mr Renovate, Dubai's trusted renovation company providing kitchen, bathroom, flooring and complete home renovation services."
+        schema={[organizationSchema, aboutPageSchema]}
       />
       <Navbar />
       <main>
