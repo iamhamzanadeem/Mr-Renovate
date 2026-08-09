@@ -50,6 +50,7 @@ const Gallery = () => {
     <SEO
       title="Renovation Gallery | Mr Renovate Dubai"
       description="Browse our completed kitchen, bathroom and home renovation projects across Dubai."
+      schema={[gallerySchema]}
      />
       <Navbar />
       <main>
