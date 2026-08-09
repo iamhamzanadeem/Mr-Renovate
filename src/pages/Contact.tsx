@@ -12,6 +12,20 @@ import { Phone, Mail, MapPin, Clock, MessageCircle, Send, CheckCircle } from "lu
 import { z } from "zod";
 import SEO from "@/components/SEO";
 
+const contactPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  name: "Contact Mr Renovate",
+  url: "https://mrrenovate.ae/contact",
+  description:
+    "Contact Mr Renovate for kitchen, bathroom, flooring, painting and complete home renovation services in Dubai.",
+  mainEntity: {
+    "@type": "LocalBusiness",
+    name: "Mr Renovate",
+    url: "https://mrrenovate.ae/",
+  },
+};
+
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100),
   email: z.string().trim().email("Invalid email address").max(255),
@@ -26,6 +40,7 @@ const contactInfo = [
   { icon: MapPin, label: "Visit Us", value: "Al Quoz Industrial 3, Dubai, UAE", href: "#map" },
   { icon: Clock, label: "Working Hours", value: "Sun–Thu: 8AM – 6PM | Sat: 9AM – 2PM", href: undefined },
 ];
+
 
 const Contact = () => {
   const { toast } = useToast();
@@ -60,7 +75,8 @@ const Contact = () => {
      <SEO
       title="Contact Mr Renovate | Get a Free Quote"
       description="Contact Mr Renovate for professional renovation services in Dubai. Request a free consultation today."
-    />
+      schema={[contactPageSchema]}
+     />
       <Navbar />
       <main>
         {/* Hero */}
