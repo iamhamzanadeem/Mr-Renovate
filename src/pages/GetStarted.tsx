@@ -98,10 +98,10 @@ const GetStarted = () => {
 
   return (
     <>
-    <SEO
-     title="Renovation Gallery | Mr Renovate Dubai"
-     description="Browse our completed kitchen, bathroom and home renovation projects across Dubai."
-    />
+     <SEO
+      title="Get Started | Mr Renovate Dubai"
+      description="Start your home renovation project with Mr Renovate. Get a free quote from our renovation experts."
+     />
       <Navbar />
       <main>
         {/* Hero */}
