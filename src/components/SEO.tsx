@@ -14,8 +14,10 @@ export default function SEO({
   keywords,
   schema,
 }: SEOProps) {
-  
   const location = useLocation();
+
+  const canonicalUrl = `https://mrrenovate.ae${location.pathname}`;
+
   return (
     <Helmet>
       <title>{title}</title>
@@ -24,8 +26,8 @@ export default function SEO({
 
       {keywords && (
         <meta
-         name="keywords"
-         content="home renovation dubai, home renovation company dubai, kitchen renovation dubai, bathroom renovation dubai, villa renovation dubai"
+          name="keywords"
+          content={keywords}
         />
       )}
 
@@ -35,24 +37,28 @@ export default function SEO({
 
       <meta property="og:description" content={description} />
 
-      <meta property="og:type" content="website"/>
+      <meta property="og:type" content="website" />
 
-      <meta property="og:url" content={`https://mrrenovate.ae${location.pathname}`} />
+      <meta property="og:url" content={canonicalUrl} />
 
-      <meta property="og:image" content="https://mrrenovate.ae/og-image.jpg" />
+      <meta
+        property="og:image"
+        content="https://mrrenovate.ae/og-image.jpg"
+      />
 
       <link
         rel="canonical"
-        href={`https://mrrenovate.ae${location.pathname}`}
+        href={canonicalUrl}
       />
+
       {schema?.map((item, index) => (
-  <script
-    key={index}
-    type="application/ld+json"
-  >
-    {JSON.stringify(item)}
-  </script>
-))}
+        <script
+          key={index}
+          type="application/ld+json"
+        >
+          {JSON.stringify(item)}
+        </script>
+      ))}
     </Helmet>
   );
 }
