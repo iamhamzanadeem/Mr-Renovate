@@ -21,7 +21,7 @@ const Footer = () => {
             <h4 className="font-display font-bold text-primary-foreground mb-4">Quick Links</h4>
             <ul className="space-y-3">
               {[
-                { label: "About Us", href: "/about" },
+                { label: "About Us", href: "/about-us" },
                 { label: "Services", href: "/services" },
                 { label: "Gallery", href: "/gallery" },
                 { label: "Contact", href: "/contact" },
