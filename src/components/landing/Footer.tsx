@@ -38,15 +38,30 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="font-display font-bold text-primary-foreground mb-4">Services</h4>
-            <ul className="space-y-3">
-              {["Kitchen Renovation", "Bathroom Remodeling", "Flooring", "Painting", "Landscaping", "Full Renovation"].map((s) => (
-                <li key={s}>
-                  <span className="text-sm font-body text-primary-foreground/50">{s}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+  <h4 className="font-display font-bold text-primary-foreground mb-4">
+    Services
+  </h4>
+
+  <ul className="space-y-3">
+    {[
+      { name: "Kitchen Renovation", slug: "/services/kitchen-renovation" },
+      { name: "Bathroom Remodeling", slug: "services/bathroom-renovation" },
+      { name: "Flooring", slug: "services/flooring" },
+      { name: "Painting", slug: "services/painting-services" },
+      { name: "Landscaping", slug: "services/landscaping" },
+      { name: "Full Renovation", slug: "services/general-renovation" },
+    ].map((service) => (
+      <li key={service.slug}>
+        <Link
+          to={`/services/${service.slug}`}
+          className="text-sm font-body text-primary-foreground/50 hover:text-accent transition-colors"
+        >
+          {service.name}
+        </Link>
+      </li>
+    ))}
+  </ul>
+</div>
 
           {/* Contact */}
           <div>
