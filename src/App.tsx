@@ -26,17 +26,23 @@ const AnimatedRoutes = () => {
         exit={{ opacity: 0, y: -10 }}
         transition={{ duration: 0.3 }}
       >
-        <Routes location={location}>
-          <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/services/:slug" element={<ServiceDetail />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/get-started" element={<GetStarted />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+      
+  <Routes location={location}>
+  <Route path="/" element={<Index />} />
+
+  <Route path="/about-us" element={<About />} />
+
+  <Route path="/services" element={<Services />} />
+  <Route path="/services/:slug" element={<ServiceDetail />} />
+
+  <Route path="/gallery" element={<Gallery />} />
+
+  <Route path="/contact" element={<Contact />} />
+
+  <Route path="/get-started" element={<GetStarted />} />
+
+  <Route path="*" element={<NotFound />} />
+</Routes>
       </motion.div>
     </AnimatePresence>
   );
@@ -47,7 +53,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/wp">
         <AnimatedRoutes />
       </BrowserRouter>
     </TooltipProvider>
