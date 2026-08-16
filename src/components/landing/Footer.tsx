@@ -44,12 +44,12 @@ const Footer = () => {
 
   <ul className="space-y-3">
     {[
-      { name: "Kitchen Renovation", slug: "/services/kitchen-renovation" },
-      { name: "Bathroom Remodeling", slug: "services/bathroom-renovation" },
-      { name: "Flooring", slug: "services/flooring" },
-      { name: "Painting", slug: "services/painting-services" },
-      { name: "Landscaping", slug: "services/landscaping" },
-      { name: "Full Renovation", slug: "services/general-renovation" },
+      { name: "Kitchen Renovation", slug: "kitchen-renovation" },
+      { name: "Bathroom Remodeling", slug: "bathroom-renovation" },
+      { name: "Flooring", slug: "flooring" },
+      { name: "Painting", slug: "painting-services" },
+      { name: "Landscaping", slug: "landscaping" },
+      { name: "Full Renovation", slug: "general-renovation" },
     ].map((service) => (
       <li key={service.slug}>
         <Link
