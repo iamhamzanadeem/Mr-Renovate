@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
+  { label: "About", href: "/about-us" },
   { label: "Services", href: "/services" },
   { label: "Gallery", href: "/gallery" },
   { label: "Contact", href: "/contact" },
