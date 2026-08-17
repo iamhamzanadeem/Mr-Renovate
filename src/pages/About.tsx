@@ -239,7 +239,7 @@ const About = () => {
                 We don't just renovate spaces — we elevate lifestyles. Ready to join 2,500+ happy homeowners?
               </p>
               <motion.a
-                href="/get-started"
+                href="/wp/get-started"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
                 className="inline-block mt-8 px-10 py-4 bg-primary text-primary-foreground font-body font-semibold rounded-xl shadow-lg hover:shadow-xl transition-shadow"
