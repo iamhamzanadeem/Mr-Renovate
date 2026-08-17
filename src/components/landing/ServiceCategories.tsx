@@ -6,12 +6,12 @@ import { ChefHat, Bath, Paintbrush, Trees, Layers, Home, ArrowRight } from "luci
 import { Link } from "react-router-dom";
 
 const services = [
-  { icon: ChefHat, title: "Kitchen", description: "Modern kitchen designs with premium fixtures, cabinetry, and smart layouts.", link: "/services/kitchen" },
-  { icon: Bath, title: "Bathroom", description: "Luxurious bathroom renovations with elegant tiling and modern fittings.", link: "/services/bathroom" },
+  { icon: ChefHat, title: "Kitchen", description: "Modern kitchen designs with premium fixtures, cabinetry, and smart layouts.", link: "/services/kitchen-renovation" },
+  { icon: Bath, title: "Bathroom", description: "Luxurious bathroom renovations with elegant tiling and modern fittings.", link: "/services/bathroom-renovation" },
   { icon: Layers, title: "Flooring", description: "Premium marble, hardwood, and engineered flooring installations.", link: "/services/flooring" },
-  { icon: Paintbrush, title: "Painting", description: "Professional interior and exterior painting with premium finishes.", link: "/services/painting" },
+  { icon: Paintbrush, title: "Painting", description: "Professional interior and exterior painting with premium finishes.", link: "/services/painting-services" },
   { icon: Trees, title: "Landscaping", description: "Transform outdoor spaces with Dubai-adapted landscaping solutions.", link: "/services/landscaping" },
-  { icon: Home, title: "Full Renovation", description: "Complete home transformation from concept to handover.", link: "/services/general" },
+  { icon: Home, title: "Full Renovation", description: "Complete home transformation from concept to handover.", link: "/services/general-renovation" },
 ];
 
 const ServiceCategories = () => {
