@@ -53,9 +53,9 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/wp">
+     <BrowserRouter>
         <AnimatedRoutes />
-      </BrowserRouter>
+     </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
 );
