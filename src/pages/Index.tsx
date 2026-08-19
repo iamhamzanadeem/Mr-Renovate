@@ -38,8 +38,8 @@ description:"Mr Renovate is a home renovation company in Dubai providing kitchen
   return (
     <>
        <SEO
-        title="Home Renovation Dubai | Home Renovation Company Dubai | Mr Renovate"
-        description="Mr Renovate is a trusted home renovation company in Dubai offering kitchen renovation, bathroom remodeling, flooring, painting and complete villa renovation services. Get a free quote today." 
+        title="Home Renovation Company in Dubai | Kitchen, Bathroom & Villa Renovation | Mr Renovate"
+        description="Home renovation in Dubai, simplified. Get matched with 150+ pre-vetted, licensed renovation experts for kitchens, bathrooms, villas & more. Free quotes in 24 hours." 
          schema={[localBusinessSchema]}
    />
       {/* Scroll progress bar */}
