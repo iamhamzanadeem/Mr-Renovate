@@ -90,7 +90,7 @@ const Navbar = () => {
                   className="inline-flex items-center gap-2 px-6 py-2.5 bg-accent text-accent-foreground font-body font-semibold text-sm rounded-lg hover:bg-gold-light transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 active:scale-[0.98]"
                 >
                   <Phone className="w-4 h-4" />
-                  Get Free Quote
+                  Get Free Consultation
                 </Link>
               </motion.div>
 
