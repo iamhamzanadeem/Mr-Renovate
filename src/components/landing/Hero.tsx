@@ -50,7 +50,7 @@ const Hero = () => {
         <TextReveal
           text="Home Renovation Dubai — Get Matched With 150+ Vetted Renovation Experts"
           as="h1"
-          className="text-3xl md:text-4xl lg:text-6xl font-display font-bold text-primary-foreground leading-tight tracking-tight max-w-5xl mx-auto"
+          className="text-2xl md:text-3xl lg:text-6xl font-display font-bold text-primary-foreground leading-tight tracking-tight max-w-5xl mx-auto"
           goldWords={[4, 5]}
           delay={0.3}
         />
