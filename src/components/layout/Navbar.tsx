@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const navLinks = [
@@ -14,6 +14,7 @@ const navLinks = [
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   useEffect(() => {
     let ticking = false;
@@ -59,23 +60,154 @@ const Navbar = () => {
             </Link>
 
             {/* Desktop Links */}
-            <div className="hidden lg:flex items-center gap-8">
-              {navLinks.map((link, i) => (
-                <motion.div
-                  key={link.href}
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 + i * 0.08 }}
-                >
-                  <Link
-                    to={link.href}
-                    className="relative text-sm font-body font-medium text-primary-foreground/80 hover:text-accent transition-colors duration-300 after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[2px] after:bg-accent after:scale-x-0 after:origin-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-left"
-                  >
-                    {link.label}
-                  </Link>
-                </motion.div>
-              ))}
-            </div>
+            {/* Desktop Links */}
+<div className="hidden lg:flex items-center gap-8">
+
+  {/* Home */}
+  <motion.div
+    initial={{ opacity: 0, y: -10 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: 0.3 }}
+  >
+    <Link
+      to="/"
+      className="relative text-sm font-body font-medium text-primary-foreground/80 hover:text-accent transition-colors duration-300 after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[2px] after:bg-accent after:scale-x-0 after:origin-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-left"
+    >
+      Home
+    </Link>
+  </motion.div>
+
+  {/* About */}
+  <motion.div
+    initial={{ opacity: 0, y: -10 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: 0.38 }}
+  >
+    <Link
+      to="/about-us"
+      className="relative text-sm font-body font-medium text-primary-foreground/80 hover:text-accent transition-colors duration-300 after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[2px] after:bg-accent after:scale-x-0 after:origin-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-left"
+    >
+      About
+    </Link>
+  </motion.div>
+
+  {/* Services Dropdown */}
+  <motion.div
+    initial={{ opacity: 0, y: -10 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: 0.46 }}
+    className="relative"
+    onMouseEnter={() => setIsServicesOpen(true)}
+    onMouseLeave={() => setIsServicesOpen(false)}
+  >
+    <Link
+      to="/services"
+      className="relative flex items-center gap-1 text-sm font-body font-medium text-primary-foreground/80 hover:text-accent transition-colors duration-300"
+    >
+      Services
+
+      <ChevronDown
+        className={`w-4 h-4 transition-transform duration-200 ${
+          isServicesOpen ? "rotate-180" : ""
+        }`}
+      />
+    </Link>
+
+    <AnimatePresence>
+      {isServicesOpen && (
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 10 }}
+          transition={{ duration: 0.2 }}
+          className="absolute left-0 top-full pt-4 w-64"
+        >
+          <div className="bg-primary rounded-xl shadow-2xl border border-primary-foreground/10 overflow-hidden">
+
+            <Link
+              to="/services"
+              className="block px-5 py-3 text-sm font-semibold text-primary-foreground hover:bg-accent hover:text-accent-foreground transition-colors border-b border-primary-foreground/10"
+            >
+              All Services
+            </Link>
+
+            <Link
+              to="/services/kitchen-renovation"
+              className="block px-5 py-3 text-sm text-primary-foreground/80 hover:bg-accent hover:text-accent-foreground transition-colors"
+            >
+              Kitchen Renovation
+            </Link>
+
+            <Link
+              to="/services/bathroom-renovation"
+              className="block px-5 py-3 text-sm text-primary-foreground/80 hover:bg-accent hover:text-accent-foreground transition-colors"
+            >
+              Bathroom Renovation
+            </Link>
+
+            <Link
+              to="/services/flooring"
+              className="block px-5 py-3 text-sm text-primary-foreground/80 hover:bg-accent hover:text-accent-foreground transition-colors"
+            >
+              Flooring
+            </Link>
+
+            <Link
+              to="/services/painting-services"
+              className="block px-5 py-3 text-sm text-primary-foreground/80 hover:bg-accent hover:text-accent-foreground transition-colors"
+            >
+              Painting Services
+            </Link>
+
+            <Link
+              to="/services/landscaping"
+              className="block px-5 py-3 text-sm text-primary-foreground/80 hover:bg-accent hover:text-accent-foreground transition-colors"
+            >
+              Landscaping
+            </Link>
+
+            <Link
+              to="/services/general-renovation"
+              className="block px-5 py-3 text-sm text-primary-foreground/80 hover:bg-accent hover:text-accent-foreground transition-colors"
+            >
+              Full Home Renovation
+            </Link>
+
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  </motion.div>
+
+  {/* Gallery */}
+  <motion.div
+    initial={{ opacity: 0, y: -10 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: 0.54 }}
+  >
+    <Link
+      to="/gallery"
+      className="relative text-sm font-body font-medium text-primary-foreground/80 hover:text-accent transition-colors duration-300 after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[2px] after:bg-accent after:scale-x-0 after:origin-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-left"
+    >
+      Gallery
+    </Link>
+  </motion.div>
+
+  {/* Contact */}
+  <motion.div
+    initial={{ opacity: 0, y: -10 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: 0.62 }}
+  >
+    <Link
+      to="/contact"
+      className="relative text-sm font-body font-medium text-primary-foreground/80 hover:text-accent transition-colors duration-300 after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[2px] after:bg-accent after:scale-x-0 after:origin-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-left"
+    >
+      Contact
+    </Link>
+  </motion.div>
+
+</div>
 
             {/* CTA + Mobile Toggle */}
             <div className="flex items-center gap-4">
