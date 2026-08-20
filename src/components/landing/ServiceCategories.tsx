@@ -26,7 +26,7 @@ const ServiceCategories = () => {
             <span className="text-sm font-body font-semibold text-accent uppercase tracking-widest">Our Services</span>
           </ScrollReveal>
           <TextReveal
-            text="Renovation Services Tailored for Dubai"
+            text="Renovation Services in Dubai for Every Space"
             as="h2"
             className="mt-4 text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground"
             goldWords={[3, 4]}
@@ -34,7 +34,7 @@ const ServiceCategories = () => {
           />
           <ScrollReveal delay={0.4}>
             <p className="mt-4 text-muted-foreground font-body max-w-2xl mx-auto">
-              From kitchens to full home makeovers, our vetted professionals deliver world-class quality.
+            From kitchen and bathroom renovations to flooring, painting, landscaping, and complete home transformations, find trusted renovation professionals for every type of project in Dubai.
             </p>
           </ScrollReveal>
         </div>

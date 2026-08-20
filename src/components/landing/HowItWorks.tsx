@@ -13,13 +13,13 @@ const steps = [
     icon: Users,
     number: "02",
     title: "Get Matched & Quoted",
-    description: "Our smart matching engine connects you with pre-vetted vendors who specialize in your project type and location.",
+    description: "Our smart matching engine connects you with pre-vetted renovation professionals who specialize in your project type and location. Compare quotes and choose the right vendor for your needs.",
   },
   {
     icon: Hammer,
     number: "03",
     title: "Get Renovated",
-    description: "Choose your preferred vendor, track progress, and enjoy your beautifully transformed space.",
+    description: "Choose your preferred professional, track your renovation project, and enjoy your beautifully transformed space.",
   },
 ];
 
@@ -33,7 +33,7 @@ const HowItWorks = () => {
             <span className="text-sm font-body font-semibold text-accent uppercase tracking-widest">How It Works</span>
           </ScrollReveal>
           <TextReveal
-            text="Three Simple Steps to Your Dream Space"
+            text="Three Simple Steps to Your Dream Renovation"
             as="h2"
             className="mt-4 text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground"
             goldWords={[3, 4]}
