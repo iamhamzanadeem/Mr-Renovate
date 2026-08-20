@@ -33,13 +33,13 @@ areaServed: "Dubai",
 
 priceRange: "$$",
 
-description:"Mr Renovate is a home renovation company in Dubai providing kitchen renovation, bathroom renovation, flooring, painting and villa renovation."};
+description:"Find trusted renovation services in Dubai for kitchens, bathrooms, villas, apartments and full home renovations. Get matched with vetted professionals and free quotes."};
   
   return (
     <>
        <SEO
-        title="Home Renovation Company in Dubai | Kitchen, Bathroom & Villa Renovation | Mr Renovate"
-        description="Home renovation in Dubai, simplified. Get matched with 150+ pre-vetted, licensed renovation experts for kitchens, bathrooms, villas & more. Free quotes in 24 hours." 
+        title="Renovation Services in Dubai | Mr Renovate"
+        description="Find trusted renovation services in Dubai for kitchens, bathrooms, villas, apartments and full home renovations. Get matched with vetted professionals and free quotes." 
          schema={[localBusinessSchema]}
    />
       {/* Scroll progress bar */}
