@@ -62,7 +62,7 @@ const Hero = () => {
           transition={{ delay: 1.2, duration: 0.6 }}
           className="mt-6 text-lg md:text-xl text-primary-foreground/60 font-body max-w-[720px] mx-auto leading-relaxed"
         >
-          Looking for reliable home renovation in Dubai? MR Renovate connects homeowners with a network of 150+ pre-vetted, licensed, and insured renovation companies. Whether you're planning a villa renovation, kitchen remodel, or bathroom upgrade, our platform helps you find professionals suited to your project and location. Compare multiple quotes and get your renovation started with a simpler, more transparent process.
+          Looking for reliable home renovation in Dubai? MR Renovate connects homeowners with 150+ pre-vetted, licensed, and insured renovation professionals. Get matched with experts for villas, kitchens, bathrooms, and more, compare quotes, and start your renovation with confidence.
         </motion.p>
 
         {/* CTA Buttons */}
