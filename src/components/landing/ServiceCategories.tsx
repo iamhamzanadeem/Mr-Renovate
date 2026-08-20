@@ -8,9 +8,9 @@ import { Link } from "react-router-dom";
 const services = [
   { icon: ChefHat, title: "Kitchen", description: "Modern kitchen renovation in Dubai with premium cabinetry, fixtures, smart layouts, and finishes designed around your lifestyle.", link: "/services/kitchen-renovation" },
   { icon: Bath, title: "Bathroom", description: "Transform your bathroom with modern fittings, elegant tiling, premium finishes, and professional bathroom renovation services in Dubai.", link: "/services/bathroom-renovation" },
-  { icon: Layers, title: "Flooring", description: "Upgrade your space with professional flooring installation, including marble, hardwood, engineered wood, and other premium flooring options.", link: "/services/flooring" },
-  { icon: Paintbrush, title: "Painting", description: "Professional interior and exterior painting with premium finishes.", link: "/services/painting-services" },
-  { icon: Trees, title: "Landscaping", description: "Transform outdoor areas with professional landscaping solutions designed for Dubai's climate, from gardens and terraces to complete outdoor spaces.", link: "/services/landscaping" },
+  { icon: Layers, title: "Flooring", description: "Upgrade your space with professional flooring installation, including marble, hardwood, engineered wood, and other premium flooring options designed for lasting style and durability.", link: "/services/flooring" },
+  { icon: Paintbrush, title: "Painting", description: "Refresh your home or commercial space with professional interior and exterior painting and premium-quality finishes." },
+  { icon: Trees, title: "Landscaping", description: "Transform outdoor areas with professional landscaping solutions designed for Dubai’s climate, including gardens, terraces, patios, and complete outdoor living spaces.", link: "/services/landscaping" },
   { icon: Home, title: "Full Renovation", description: "Complete home renovation in Dubai, from planning and design through construction, finishing, and final handover.", link: "/services/general-renovation" },
 ];
 
