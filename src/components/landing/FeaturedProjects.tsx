@@ -11,7 +11,7 @@ const projects = [
   { id: 3, category: "Living Room", title: "Contemporary Living Space", location: "Downtown Dubai", image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&q=80" },
   { id: 4, category: "Kitchen", title: "Minimalist Kitchen", location: "JBR", image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80" },
   { id: 5, category: "Outdoor", title: "Garden Terrace Renovation", location: "Arabian Ranches", image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=80" },
-  { id: 6, category: "Bathroom", title: "Classic Marble Bathroom", location: "Emirates Hills", image: "https://unsplash.com/photos/a-bathroom-with-green-cabinets-and-a-marble-shower-FiKcg6EMneY" },
+  { id: 6, category: "Bathroom", title: "Classic Marble Bathroom", location: "Emirates Hills", image: "https://unsplash.com/photos/dresser-near-glass-shower-stall-m78oBvRHBm0" },
 ];
 
 const FeaturedProjects = () => {
