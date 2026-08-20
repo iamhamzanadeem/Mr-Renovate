@@ -26,14 +26,20 @@ const FeaturedProjects = () => {
             <span className="text-sm font-body font-semibold text-accent uppercase tracking-widest">Portfolio</span>
           </ScrollReveal>
           <TextReveal
-            text="Our Featured Renovation Projects"
+            text="Our Featured Renovation Projects in Dubai"
             as="h2"
             className="mt-4 text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground"
             goldWords={[2, 3]}
             delay={0.2}
           />
+          <ScrollReveal>
+        <p className="mt-6 max-w-2xl mx-auto text-base md:text-lg text-muted-foreground font-body leading-relaxed">
+          Explore completed kitchen, bathroom, living room, and outdoor
+          renovation projects across Dubai.
+        </p>
+      </ScrollReveal>
         </div>
-
+        
         {/* Filter Tabs */}
         <div className="flex flex-wrap justify-center gap-2 mb-12">
           {categories.map((cat) => (
