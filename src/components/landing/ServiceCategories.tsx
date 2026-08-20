@@ -6,12 +6,12 @@ import { ChefHat, Bath, Paintbrush, Trees, Layers, Home, ArrowRight } from "luci
 import { Link } from "react-router-dom";
 
 const services = [
-  { icon: ChefHat, title: "Kitchen", description: "Modern kitchen designs with premium fixtures, cabinetry, and smart layouts.", link: "/services/kitchen-renovation" },
-  { icon: Bath, title: "Bathroom", description: "Luxurious bathroom renovations with elegant tiling and modern fittings.", link: "/services/bathroom-renovation" },
-  { icon: Layers, title: "Flooring", description: "Premium marble, hardwood, and engineered flooring installations.", link: "/services/flooring" },
+  { icon: ChefHat, title: "Kitchen", description: "Modern kitchen renovation in Dubai with premium cabinetry, fixtures, smart layouts, and finishes designed around your lifestyle.", link: "/services/kitchen-renovation" },
+  { icon: Bath, title: "Bathroom", description: "Transform your bathroom with modern fittings, elegant tiling, premium finishes, and professional bathroom renovation services in Dubai.", link: "/services/bathroom-renovation" },
+  { icon: Layers, title: "Flooring", description: "Upgrade your space with professional flooring installation, including marble, hardwood, engineered wood, and other premium flooring options.", link: "/services/flooring" },
   { icon: Paintbrush, title: "Painting", description: "Professional interior and exterior painting with premium finishes.", link: "/services/painting-services" },
-  { icon: Trees, title: "Landscaping", description: "Transform outdoor spaces with Dubai-adapted landscaping solutions.", link: "/services/landscaping" },
-  { icon: Home, title: "Full Renovation", description: "Complete home transformation from concept to handover.", link: "/services/general-renovation" },
+  { icon: Trees, title: "Landscaping", description: "Transform outdoor areas with professional landscaping solutions designed for Dubai's climate, from gardens and terraces to complete outdoor spaces.", link: "/services/landscaping" },
+  { icon: Home, title: "Full Renovation", description: "Complete home renovation in Dubai, from planning and design through construction, finishing, and final handover.", link: "/services/general-renovation" },
 ];
 
 const ServiceCategories = () => {
