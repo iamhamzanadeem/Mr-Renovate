@@ -62,7 +62,7 @@ const Hero = () => {
           transition={{ delay: 1.2, duration: 0.6 }}
           className="mt-6 text-lg md:text-xl text-primary-foreground/60 font-body max-w-[720px] mx-auto leading-relaxed"
         >
-          From home and villa renovations to kitchens, bathrooms, offices, and outdoor spaces, MR Renovate connects you with 150+ vetted renovation professionals across Dubai.
+          Discover trusted renovation services in Dubai for homes, villas, apartments, kitchens, bathrooms, and commercial spaces. Get matched with pre-vetted renovation professionals and compare quotes for your project.
         </motion.p>
 
         {/* CTA Buttons */}
