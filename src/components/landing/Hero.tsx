@@ -9,15 +9,20 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary">
       {/* Background with Ken Burns */}
       <div className="absolute inset-0">
-        <div
-          className="absolute inset-0 animate-ken-burns will-change-transform"
-          style={{
-            backgroundImage: `linear-gradient(135deg, hsl(var(--navy-dark) / 0.85), hsl(var(--navy) / 0.7)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80')`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
-      </div>
+  <img
+    src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80"
+    alt="Modern luxury home interior renovation in Dubai"
+    className="absolute inset-0 w-full h-full object-cover animate-ken-burns will-change-transform"
+  />
+
+  <div
+    className="absolute inset-0"
+    style={{
+      background:
+        "linear-gradient(135deg, hsl(var(--navy-dark) / 0.85), hsl(var(--navy) / 0.7))",
+    }}
+  />
+</div>
 
       {/* Animated gradient overlay */}
       <div className="absolute inset-0 animate-gradient-shift opacity-30"
