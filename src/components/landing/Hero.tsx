@@ -53,7 +53,7 @@ const Hero = () => {
 
         {/* Headline */}
         <TextReveal
-          text="Transform Your Space into a Masterpiece"
+          text="Find Renovation Companies & Professionals in Dubai"
           as="h1"
           className="text-3xl md:text-4xl lg:text-6xl font-display font-bold text-primary-foreground leading-tight tracking-tight max-w-5xl mx-auto"
           goldWords={[4, 5]}
@@ -67,7 +67,7 @@ const Hero = () => {
           transition={{ delay: 1.2, duration: 0.6 }}
           className="mt-6 text-lg md:text-xl text-primary-foreground/60 font-body max-w-[720px] mx-auto leading-relaxed"
         >
-          Discover trusted renovation services in Dubai for homes, villas, apartments, kitchens, bathrooms, and commercial spaces. Get matched with pre-vetted renovation professionals and compare quotes for your project.
+          Connect with leading renovation companies in Dubai through MR Renovate. Submit your project requirements to compare quotes and hire vetted professionals for your apartment, villa, or office.
         </motion.p>
 
         {/* CTA Buttons */}
