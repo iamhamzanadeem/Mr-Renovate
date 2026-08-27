@@ -1,6 +1,7 @@
 import { motion, useScroll, useSpring } from "framer-motion";
 import Navbar from "../components/layout/Navbar";
 import Hero from "../components/landing/Hero";
+import AboutMarketplace from "@/components/landing/AboutMarketplace";
 import StatsCounter from "../components/landing/StatsCounter";
 import HowItWorks from "../components/landing/HowItWorks";
 import ServiceCategories from "../components/landing/ServiceCategories";
