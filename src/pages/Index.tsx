@@ -50,6 +50,7 @@ description:"Find trusted renovation services in Dubai for kitchens, bathrooms, 
 
       <main>
         <Hero />
+        <AboutMarketplace />
         <StatsCounter />
         <HowItWorks />
         <ServiceCategories />
