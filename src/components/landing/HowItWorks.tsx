@@ -33,7 +33,7 @@ const HowItWorks = () => {
             <span className="text-sm font-body font-semibold text-accent uppercase tracking-widest">How It Works</span>
           </ScrollReveal>
           <TextReveal
-            text="Three Simple Steps to Your Dream Renovation"
+            text="How MR Renovate Works in 3 Simple Steps"
             as="h2"
             className="mt-4 text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground"
             goldWords={[3, 4]}

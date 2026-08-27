@@ -6,12 +6,12 @@ import { ChefHat, Bath, Paintbrush, Trees, Layers, Home, ArrowRight } from "luci
 import { Link } from "react-router-dom";
 
 const services = [
-  { icon: ChefHat, title: "Kitchen", description: "Modern kitchen renovation in Dubai with premium cabinetry, fixtures, smart layouts, and finishes designed around your lifestyle.", link: "/services/kitchen-renovation" },
-  { icon: Bath, title: "Bathroom", description: "Transform your bathroom with modern fittings, elegant tiling, premium finishes, and professional bathroom renovation services in Dubai.", link: "/services/bathroom-renovation" },
-  { icon: Layers, title: "Flooring", description: "Upgrade your space with professional flooring installation, including marble, hardwood, engineered wood, and other premium flooring options designed for lasting style and durability.", link: "/services/flooring" },
-  { icon: Paintbrush, title: "Painting", description: "Refresh your home or commercial space with professional interior and exterior painting and premium-quality finishes." },
-  { icon: Trees, title: "Landscaping", description: "Transform outdoor areas with professional landscaping solutions designed for Dubai’s climate, including gardens, terraces, patios, and complete outdoor living spaces.", link: "/services/landscaping" },
-  { icon: Home, title: "Full Renovation", description: "Complete home renovation in Dubai, from planning and design through construction, finishing, and final handover.", link: "/services/general-renovation" },
+  { icon: ChefHat, title: "Kitchen", description: "Connect with a dedicated kitchen renovation specialist or experienced kitchen renovation company to handle your layout redesign, custom cabinetry, island installations, and countertop upgrades across Dubai.", link: "/services/kitchen-renovation" },
+  { icon: Bath, title: "Bathroom", description: "Discover trusted bathroom renovation contractors and companies near you for modern bathroom remodel projects, full sanitary ware installations, waterproofing, and tile upgrades.", link: "/services/bathroom-renovation" },
+  { icon: Layers, title: "Flooring", description: "Source expert flooring professionals for wooden flooring in Dubai, premium engineered wood flooring, resilient SPC flooring, luxury vinyl tile (LVT), and marble restoration.", link: "/services/flooring" },
+  { icon: Paintbrush, title: "Painting", description: "Find professional painting contractors in Dubai offering complete home painting services, interior wall painting service, and premium exterior protective finishes for villas and apartments",  link: "/services/painting-services"},
+  { icon: Trees, title: "Landscaping", description: "Connect with top landscaping companies in Dubai for custom garden landscape design, outdoor living builds, pergola installations, and full villa garden enhancements.", link: "/services/landscaping" },
+  { icon: Home, title: "Full Renovation", description: "Hire an experienced interior remodeling contractor or turnkey home renovation company in Dubai for full house refurbishments, structural alterations, and end-to-end project execution.", link: "/services/general-renovation" },
 ];
 
 const ServiceCategories = () => {
@@ -26,7 +26,7 @@ const ServiceCategories = () => {
             <span className="text-sm font-body font-semibold text-accent uppercase tracking-widest">Our Services</span>
           </ScrollReveal>
           <TextReveal
-            text="Renovation Services in Dubai for Every Space"
+            text="Renovation Services Available Through Our Network"
             as="h2"
             className="mt-4 text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground"
             goldWords={[3, 4]}
