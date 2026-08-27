@@ -6,6 +6,7 @@ import StatsCounter from "../components/landing/StatsCounter";
 import HowItWorks from "../components/landing/HowItWorks";
 import ServiceCategories from "../components/landing/ServiceCategories";
 import PropertyTypes from "@/components/landing/PropertyTypes";
+import WhyChooseUs from "@/components/landing/WhyChooseUs";
 import FeaturedProjects from "../components/landing/FeaturedProjects";
 import Testimonials from "../components/landing/Testimonials";
 import TrustBadges from "../components/landing/TrustBadges";
@@ -56,6 +57,7 @@ description:"Find trusted renovation services in Dubai for kitchens, bathrooms, 
         <HowItWorks />
         <ServiceCategories />
         <PropertyTypes />
+        <WhyChooseUs />
         <FeaturedProjects />
         <Testimonials />
         <TrustBadges />
