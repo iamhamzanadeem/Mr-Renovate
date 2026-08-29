@@ -117,7 +117,7 @@ const AboutMarketplace = () => {
 
               {/* About Link */}
               <Link
-                to="/about"
+                to="/about-us"
                 className="inline-flex items-center gap-2 mt-10 text-accent font-body font-semibold hover:gap-3 transition-all"
               >
                 Learn More About MR Renovate
