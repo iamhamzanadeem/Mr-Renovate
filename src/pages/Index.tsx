@@ -41,7 +41,7 @@ description:"Find trusted renovation services in Dubai for kitchens, bathrooms, 
   return (
     <>
        <SEO
-        title="Renovation Services in Dubai | Mr Renovate"
+        title="Renovation Companies in Dubai | Find & Connect with Pros | MR Renovate"
         description="Find trusted renovation services in Dubai for kitchens, bathrooms, villas, apartments and full home renovations. Get matched with vetted professionals and free quotes." 
          schema={[localBusinessSchema]}
    />
