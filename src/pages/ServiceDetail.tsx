@@ -9,36 +9,319 @@ import SEO from "@/components/SEO";
 
 
 const serviceData: Record<string, {
-  icon: typeof ChefHat;
+   icon: typeof ChefHat;
   title: string;
   tagline: string;
   heroImage: string;
   description: string[];
   features: string[];
-  process: { step: string; title: string; desc: string }[];
+  sections?: {
+    title: string;
+    content?: string[];
+    items?: {
+      title: string;
+      desc: string;
+    }[];
+  }[];
+  process: {
+    step: string;
+    title: string;
+    desc: string;
+  }[];
   gallery: string[];
+  faqs?: {
+  question: string;
+  answer: string;
+}[];
+faqDescription?: string;
 }> = {
   "kitchen-renovation": {
-    icon: ChefHat,
-    title: "Kitchen Renovation Dubai",
-    tagline: "The Heart of Your Home, Reimagined",
-    heroImage: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920&q=80",
-    description: [
-      "Your kitchen should work for the way you live. Whether you are updating an apartment kitchen, transforming a villa kitchen, or planning a complete kitchen renovation, the right planning can make a significant difference to the final result.",
-      "MR Renovate helps property owners in Dubai submit their kitchen renovation requirements and connect with suitable renovation professionals from its network. You can share your project details, discuss your requirements with the relevant professionals, and move forward with the option that suits your project.",
-    ],
-    features: ["Custom Cabinetry Design", "Natural Stone Countertops", "Smart Appliance Integration", "Kitchen Island Design", "Under-Cabinet Lighting", "Plumbing & Gas Upgrades", "Ventilation Systems", "Backsplash Design"],
-    process: [
-      { step: "01", title: "Design Consultation", desc: "We visit your home, understand your needs, and create a 3D kitchen design." },
-      { step: "02", title: "Material Selection", desc: "Choose from our curated collection of premium materials and finishes." },
-      { step: "03", title: "Precision Build", desc: "Our craftsmen install every component with meticulous attention to detail." },
-      { step: "04", title: "Final Reveal", desc: "Walk through your completed kitchen with our quality assurance team." },
-    ],
-    gallery: [
-      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80",
-      "https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=600&q=80",
-      "https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=600&q=80",
-    ],
+  icon: ChefHat,
+
+  title: "Kitchen Renovation Dubai",
+
+  tagline: "Plan Your Kitchen Renovation With the Right Professionals",
+
+  heroImage:
+    "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920&q=80",
+
+  description: [
+    "Your kitchen should work for the way you live. Whether you are updating an apartment kitchen, transforming a villa kitchen, or planning a complete kitchen renovation, the right planning can make a significant difference to the final result.",
+
+    "MR Renovate helps property owners in Dubai submit their kitchen renovation requirements and connect with suitable renovation professionals from its network. You can share your project details, discuss your requirements with the relevant professionals, and move forward with the option that suits your project."
+  ],
+
+  features: [
+    "Custom Kitchen Cabinetry",
+    "Countertops & Worktops",
+    "Kitchen Island Design",
+    "Kitchen Lighting",
+    "Appliance Integration",
+    "Plumbing & Electrical Work",
+    "Backsplash & Wall Finishes",
+    "Ventilation Systems"
+  ],
+
+  sections: [
+    {
+      title: "Kitchen Renovation Options in Dubai",
+
+      content: [
+        "Every kitchen renovation project has different requirements. Some homeowners want to refresh the appearance of their kitchen, while others want to completely change the layout.",
+
+        "The right approach depends on your existing kitchen, property type, desired changes and overall project scope."
+      ],
+
+      items: [
+        {
+          title: "Kitchen Refresh",
+          desc: "Update selected elements such as cabinet fronts, countertops, backsplash, lighting or fixtures without completely rebuilding the kitchen."
+        },
+        {
+          title: "Partial Kitchen Renovation",
+          desc: "Renovate specific areas of your kitchen while keeping existing elements that are still suitable for your needs."
+        },
+        {
+          title: "Full Kitchen Renovation",
+          desc: "A complete renovation can involve cabinetry, countertops, flooring, lighting, plumbing, electrical points, appliances and other parts of the kitchen."
+        },
+        {
+          title: "Custom Kitchen Renovation",
+          desc: "Plan your kitchen around specific storage needs, layouts, materials, finishes and design preferences for a more personalised space."
+        }
+      ]
+    },
+
+    {
+      title: "Kitchen Renovation for Apartments and Villas",
+
+      content: [
+        "Kitchen requirements can differ significantly depending on the type of property. Whether you are renovating an apartment kitchen or a villa kitchen, the project should be planned around the available space and existing configuration."
+      ],
+
+      items: [
+        {
+          title: "Apartment Kitchen Renovation",
+          desc: "Apartment kitchens often require careful planning around the existing floor plan and available space. Renovation may focus on improving storage, circulation, lighting, finishes and functionality."
+        },
+        {
+          title: "Villa Kitchen Renovation",
+          desc: "Villa kitchens may provide more flexibility in terms of layout, storage and overall space. Depending on the property, homeowners may consider larger islands, expanded storage, upgraded finishes or layout changes."
+        }
+      ]
+    },
+
+    {
+      title: "How Much Does Kitchen Renovation Cost in Dubai?",
+
+      content: [
+        "The cost of a kitchen renovation in Dubai depends on the scope of work rather than one fixed price.",
+
+        "A simple kitchen refresh will have different requirements from a complete renovation involving new cabinetry, countertops, appliances, plumbing, electrical work and layout changes.",
+
+        "The final cost can be affected by kitchen size, cabinet materials, countertop selection, appliances, plumbing and electrical modifications, flooring, backsplash, lighting, fixtures, demolition and the overall project specifications."
+      ]
+    },
+
+    {
+      title: "What Affects Kitchen Renovation Cost?",
+
+      items: [
+        {
+          title: "1. Kitchen Size",
+          desc: "A larger kitchen may require more cabinetry, countertop material, flooring, lighting and installation work."
+        },
+        {
+          title: "2. Materials and Finishes",
+          desc: "Cabinet finishes, countertop materials, tiles, fixtures and hardware can vary considerably in price."
+        },
+        {
+          title: "3. Layout Changes",
+          desc: "Moving appliances, sinks, plumbing points or electrical connections can increase the complexity of the renovation."
+        },
+        {
+          title: "4. Cabinetry",
+          desc: "The number of cabinets, storage configuration, materials and finishes all contribute to the overall project cost."
+        },
+        {
+          title: "5. Appliances",
+          desc: "Replacing or adding appliances can increase the total renovation budget, particularly when integrated appliances or major kitchen equipment are involved."
+        },
+        {
+          title: "6. Project Scope",
+          desc: "A cosmetic kitchen makeover will have different requirements from a complete kitchen renovation involving multiple trades and extensive changes."
+        }
+      ]
+    },
+
+    {
+      title: "Why Start Your Kitchen Renovation Through MR Renovate?",
+
+      content: [
+        "Finding the right place to start can make the renovation process easier to organise. MR Renovate provides a starting point for property owners looking for kitchen renovation professionals in Dubai."
+      ],
+
+      items: [
+        {
+          title: "One Place to Start",
+          desc: "Instead of searching broadly for kitchen companies in Dubai, you can begin by submitting your project requirements through MR Renovate."
+        },
+        {
+          title: "Project-Focused Requirements",
+          desc: "Your project starts with your specific requirements, including the type of property, renovation scope, design preferences and other relevant details."
+        },
+        {
+          title: "Access to a Renovation Network",
+          desc: "MR Renovate connects property owners with suitable renovation professionals within its network based on the requirements shared for the project."
+        },
+        {
+          title: "Dubai-Focused",
+          desc: "The platform is focused on connecting property owners with renovation professionals for projects in Dubai."
+        }
+      ]
+    },
+
+    {
+      title: "Looking for Kitchen Design Companies in Dubai?",
+
+      content: [
+        "Kitchen renovation and kitchen design often go hand in hand. Before work begins, it is important to consider how the kitchen will look and function as a complete space.",
+
+        "Depending on your project, you may want to discuss the kitchen layout, cabinet configuration, storage requirements, countertop selection, kitchen island placement, lighting, appliance positioning, backsplash, finishes, colour schemes and overall kitchen style.",
+
+        "If you are searching for kitchen design companies in Dubai, clearly communicating your design preferences and functional requirements can help you find professionals suited to your project."
+      ]
+    },
+
+    {
+      title: "Kitchen Renovation Ideas for Dubai Homes",
+
+      items: [
+        {
+          title: "Open and Practical Layouts",
+          desc: "Create a layout that allows comfortable movement between preparation, cooking and storage areas."
+        },
+        {
+          title: "More Functional Storage",
+          desc: "Use cabinets and storage solutions that make better use of the available kitchen space."
+        },
+        {
+          title: "Kitchen Islands",
+          desc: "Where space allows, an island can provide additional preparation space, storage or seating."
+        },
+        {
+          title: "Integrated Appliances",
+          desc: "Plan appliance positions alongside cabinetry to create a cohesive appearance."
+        },
+        {
+          title: "Layered Lighting",
+          desc: "Combine different types of lighting to make food preparation and everyday use more comfortable."
+        },
+        {
+          title: "Durable Finishes",
+          desc: "Select materials based on your preferred appearance, maintenance requirements and expected use."
+        }
+      ]
+    },
+
+    {
+      title: "What Should You Prepare Before Requesting a Kitchen Renovation?",
+
+      content: [
+        "Having useful project information ready can make discussions with kitchen renovation specialists more focused and productive."
+      ],
+
+      items: [
+        {
+          title: "Property Type",
+          desc: "Let professionals know whether you are renovating an apartment, villa or another type of property."
+        },
+        {
+          title: "Kitchen Dimensions",
+          desc: "Provide approximate kitchen dimensions or measurements if available."
+        },
+        {
+          title: "Existing Kitchen Photos",
+          desc: "Photos can help communicate the current condition and layout of your kitchen."
+        },
+        {
+          title: "Desired Changes",
+          desc: "Explain which elements you want to renovate, replace, remove or add."
+        },
+        {
+          title: "Design Preferences",
+          desc: "Share your preferred kitchen style, materials, colours, finishes and design ideas."
+        },
+        {
+          title: "Timeline and Budget",
+          desc: "Provide your preferred project timeline and approximate budget or specifications if available."
+        }
+      ]
+    }
+  ],
+
+  process: [
+    {
+      step: "01",
+      title: "Submit Your Requirements",
+      desc: "Tell us what you want to change in your kitchen, including your property type, renovation requirements, preferred specifications and project goals."
+    },
+    {
+      step: "02",
+      title: "Share Your Project Details",
+      desc: "Provide useful information such as photos, measurements, design ideas, preferred materials, appliance requirements and other relevant project details."
+    },
+    {
+      step: "03",
+      title: "Connect With Suitable Professionals",
+      desc: "MR Renovate can connect your project requirements with suitable kitchen renovation professionals within its network."
+    },
+    {
+      step: "04",
+      title: "Discuss & Decide",
+      desc: "Discuss the scope of work, materials, design requirements, timeline and quotation with the professionals involved, then decide how you want to proceed."
+    }
+  ],
+faqDescription:
+    "Find answers to common questions about kitchen renovation in Dubai.",
+
+  faqs: [
+    {
+      question: "How much does kitchen renovation cost in Dubai?",
+      answer: "Kitchen renovation costs vary depending on the kitchen size, materials, cabinetry, appliances, layout changes and overall scope of work. A basic refresh and a complete kitchen renovation can have very different budgets."
+    },
+    {
+      question: "How long does a kitchen renovation take in Dubai?",
+      answer: "The timeline depends on the scope of the renovation. A smaller update may require less work than a complete renovation involving cabinetry, plumbing, electrical work, flooring and other changes. The expected timeline should be discussed based on your specific project."
+    },
+    {
+      question: "Can I renovate an apartment kitchen in Dubai?",
+      answer: "Yes. Apartment kitchens can be renovated based on the available space, existing layout and project requirements. The renovation scope should be planned around the specific apartment and the changes you want to make."
+    },
+    {
+      question: "Can I change my kitchen layout?",
+      answer: "Layout changes may be possible depending on the property and existing kitchen configuration. Changes involving plumbing, electrical connections or other building elements should be discussed with the appropriate renovation professional."
+    },
+    {
+      question: "What should I include when requesting a kitchen renovation?",
+      answer: "Include your property type, kitchen dimensions, photos, existing layout, desired changes, preferred materials or style, appliance requirements, timeline and approximate budget if available."
+    },
+    {
+      question: "How do I find a kitchen renovation company in Dubai?",
+      answer: "You can start by clearly defining your renovation requirements and looking for suitable kitchen renovation professionals. MR Renovate allows property owners to submit their requirements and connect with suitable professionals within its network."
+    },
+    {
+      question: "What is the difference between a kitchen renovation and a kitchen makeover?",
+      answer: "A kitchen makeover usually focuses on selected visual or functional updates, while a renovation can involve more extensive changes to cabinetry, layout, plumbing, electrical work, flooring, appliances and other elements."
+    }
+  ],
+
+  gallery: [
+    "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80",
+    "https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=600&q=80",
+    "https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=600&q=80"
+  ],
+
   },
   "bathroom-renovation": {
     icon: Bath,
@@ -206,34 +489,107 @@ const ServiceDetail = () => {
           </div>
         </section>
 
-        {/* Description */}
-        <section className="py-20 bg-background">
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-16 items-start">
-              <ScrollReveal>
-                <h2 className="text-3xl font-display font-bold text-foreground">What We <span className="text-accent">Offer</span></h2>
-                {service.description.map((p, i) => (
-                  <p key={i} className="mt-4 text-muted-foreground font-body text-lg leading-relaxed">{p}</p>
-                ))}
-                <Link to="/get-started">
-                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }} className="inline-flex items-center gap-2 mt-8 px-8 py-3 bg-accent text-accent-foreground font-body font-semibold rounded-xl">
-                    <Phone className="w-4 h-4" /> Submit Your Kitchen Renovation Requirements
-                  </motion.div>
-                </Link>
-              </ScrollReveal>
-              <ScrollReveal delay={0.2}>
-                <div className="grid grid-cols-2 gap-4">
-                  {service.features.map((f) => (
-                    <div key={f} className="flex items-center gap-3 py-3 px-4 bg-secondary rounded-xl">
-                      <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
-                      <span className="text-sm font-body text-foreground">{f}</span>
-                    </div>
-                  ))}
-                </div>
-              </ScrollReveal>
+       
+{/* Introduction */}
+<section className="py-20 bg-background">
+  <div className="container mx-auto px-4 lg:px-8">
+    <div className="grid lg:grid-cols-2 gap-16 items-start">
+
+      <ScrollReveal>
+        <h2 className="text-3xl font-display font-bold text-foreground">
+          Kitchen Renovation Services in <span className="text-accent">Dubai</span>
+        </h2>
+
+        {service.description.map((p, i) => (
+          <p
+            key={i}
+            className="mt-4 text-muted-foreground font-body text-lg leading-relaxed"
+          >
+            {p}
+          </p>
+        ))}
+
+        <Link to="/get-started">
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+            className="inline-flex items-center gap-2 mt-8 px-8 py-3 bg-accent text-accent-foreground font-body font-semibold rounded-xl"
+          >
+            <Phone className="w-4 h-4" />
+            Submit Your Kitchen Renovation Requirements
+          </motion.div>
+        </Link>
+      </ScrollReveal>
+
+      {/* Features */}
+      <ScrollReveal delay={0.2}>
+        <div className="grid sm:grid-cols-2 gap-4">
+          {service.features.map((feature, i) => (
+            <div
+              key={i}
+              className="p-5 rounded-xl border border-border bg-card"
+            >
+              <div className="flex items-center gap-3">
+                <div className="w-2 h-2 rounded-full bg-accent" />
+                <span className="font-body font-medium text-foreground">
+                  {feature}
+                </span>
+              </div>
             </div>
-          </div>
-        </section>
+          ))}
+        </div>
+      </ScrollReveal>
+
+    </div>
+  </div>
+</section>
+
+{/* SEO Content Sections */}
+{service.sections?.map((section, index) => (
+  <section
+    key={index}
+    className={`py-20 ${
+      index % 2 === 0 ? "bg-muted/30" : "bg-background"
+    }`}
+  >
+    <div className="container mx-auto px-4 lg:px-8 max-w-6xl">
+
+      <ScrollReveal>
+        <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-8">
+          {section.title}
+        </h2>
+
+        {section.content?.map((paragraph, i) => (
+          <p
+            key={i}
+            className="mt-4 text-muted-foreground font-body text-lg leading-relaxed max-w-4xl"
+          >
+            {paragraph}
+          </p>
+        ))}
+      </ScrollReveal>
+
+      {section.items && (
+        <div className="grid md:grid-cols-2 gap-6 mt-10">
+          {section.items.map((item, i) => (
+            <ScrollReveal key={i} delay={i * 0.05}>
+              <div className="h-full p-6 rounded-2xl border border-border bg-card">
+                <h3 className="text-xl font-display font-semibold text-foreground mb-3">
+                  {item.title}
+                </h3>
+
+                <p className="text-muted-foreground font-body leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+      )}
+
+    </div>
+  </section>
+))}
 
         {/* Process */}
         <section className="py-20 bg-secondary">
@@ -256,8 +612,49 @@ const ServiceDetail = () => {
           </div>
         </section>
 
-        {/* Gallery */}
-        <section className="py-20 bg-background">
+{/* FAQs */}
+{service.faqs && service.faqs.length > 0 && (
+  <section className="py-20 bg-background">
+    <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+
+      <ScrollReveal>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
+            Frequently Asked <span className="text-accent">Questions</span>
+          </h2>
+
+          <p className="mt-4 text-muted-foreground font-body text-lg">
+              {service.faqDescription}
+          </p>
+        </div>
+      </ScrollReveal>
+
+      <div className="space-y-4">
+        {service.faqs.map((faq, index) => (
+          <ScrollReveal key={index} delay={index * 0.05}>
+            <details className="group rounded-xl border border-border bg-card p-6">
+              <summary className="cursor-pointer list-none flex items-center justify-between gap-4 font-display font-semibold text-lg text-foreground">
+                {faq.question}
+
+                <span className="text-accent text-2xl group-open:rotate-45 transition-transform">
+                  +
+                </span>
+              </summary>
+
+              <p className="mt-4 text-muted-foreground font-body leading-relaxed">
+                {faq.answer}
+              </p>
+            </details>
+          </ScrollReveal>
+        ))}
+      </div>
+
+    </div>
+  </section>
+)}
+
+{/* Gallery */}
+    <section className="py-20 bg-background">
           <div className="container mx-auto px-4 lg:px-8">
             <ScrollReveal className="text-center mb-12">
               <h2 className="text-3xl font-display font-bold text-foreground">Recent <span className="text-accent">Projects</span></h2>
