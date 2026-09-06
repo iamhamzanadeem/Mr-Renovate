@@ -8,13 +8,24 @@ import { Bath, ChefHat, PaintBucket, Layers, TreePine, Wrench, CheckCircle, Arro
 import SEO from "@/components/SEO";
 
 
-const serviceData: Record<string, {
-   icon: typeof ChefHat;
+  const serviceData: Record<string, {
+  icon: typeof ChefHat;
   title: string;
   tagline: string;
   heroImage: string;
+
+  seoTitle: string;
+  seoDescription: string;
+  seoKeywords: string;
+
+  introTitle: string;
+  ctaText: string;
+introTitleAccent: string;
+
+
   description: string[];
   features: string[];
+
   sections?: {
     title: string;
     content?: string[];
@@ -23,24 +34,42 @@ const serviceData: Record<string, {
       desc: string;
     }[];
   }[];
+
   process: {
     step: string;
     title: string;
     desc: string;
   }[];
+
   gallery: string[];
+
+  faqDescription?: string;
+
   faqs?: {
-  question: string;
-  answer: string;
-}[];
-faqDescription?: string;
+    question: string;
+    answer: string;
+  }[];
 }> = {
-  "kitchen-renovation": {
+
+ "kitchen-renovation": {
   icon: ChefHat,
 
   title: "Kitchen Renovation Dubai",
 
   tagline: "Plan Your Kitchen Renovation With the Right Professionals",
+
+  seoTitle:
+    "Kitchen Renovation Dubai | Kitchen Renovation Services",
+
+  seoDescription:
+    "Planning a kitchen renovation in Dubai? Submit your project requirements through MR Renovate and connect with suitable kitchen renovation professionals.",
+
+  seoKeywords:
+    "kitchen renovation Dubai, kitchen renovation in Dubai, Dubai kitchen renovation, kitchen renovation companies in Dubai, kitchen design companies in Dubai, kitchen renovation company",
+
+  introTitle: "Kitchen Renovation Services in Dubai",
+  introTitleAccent:"Dubai",
+  ctaText: "Submit Your Kitchen Renovation Requirements",
 
   heroImage:
     "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920&q=80",
@@ -324,10 +353,18 @@ faqDescription:
 
   },
   "bathroom-renovation": {
-    icon: Bath,
-    title: "Bathroom Renovation",
-    tagline: "Your Personal Spa Awaits",
-    heroImage: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1920&q=80",
+  icon: Bath,
+  title: "Bathroom Renovation Dubai",
+  tagline: "Plan Your Bathroom Renovation With the Right Professionals",
+  heroImage: "...",
+
+  seoTitle: "Bathroom Renovation Dubai | Bathroom Renovation Services",
+  seoDescription: "Planning a bathroom renovation in Dubai? Submit your project requirements through MR Renovate and connect with suitable bathroom renovation professionals.",
+  seoKeywords: "bathroom renovation Dubai, bathroom renovation in Dubai, Dubai bathroom renovation, bathroom renovation companies in Dubai, bathroom remodeling Dubai",
+
+  introTitle: "Bathroom Renovation Services in",
+  introTitleAccent:"Dubai",
+  ctaText: "Submit Your Bathroom Renovation Requirements",
     description: [
       "Transform your bathroom into a luxurious retreat. We specialize in spa-inspired designs that combine aesthetics with functionality.",
       "From frameless glass showers to heated marble floors and smart mirrors, every detail is designed to elevate your daily routine into a luxury experience.",
@@ -346,10 +383,18 @@ faqDescription:
     ],
   },
   "painting-services": {
-    icon: PaintBucket,
-    title: "Painting & Finishing",
-    tagline: "Color That Transforms",
-    heroImage: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=1920&q=80",
+  icon: PaintBucket,
+  title: "Painting & Finishing",
+  tagline: "Color That Transforms",
+  heroImage: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=1920&q=80",
+
+  seoTitle: "Painting Services Dubai | Interior & Exterior Painting",
+  seoDescription: "Looking for painting services in Dubai? Submit your project requirements through MR Renovate and connect with suitable painting and finishing professionals.",
+  seoKeywords: "painting services Dubai, painting companies Dubai, house painting Dubai, interior painting Dubai, exterior painting Dubai, painting contractors Dubai",
+
+  introTitle: "Painting & Finishing Services in",
+  introTitleAccent: "Dubai",
+  ctaText: "Submit Your Painting Requirements",
     description: [
       "The right color transforms a room. Our expert painters and color consultants work with you to find the perfect palette that reflects your personality and complements your space.",
       "We use only premium, eco-friendly paints with superior coverage and durability, ensuring your walls look stunning for years.",
@@ -368,10 +413,18 @@ faqDescription:
     ],
   },
   "flooring": {
-    icon: Layers,
-    title: "Flooring Solutions",
-    tagline: "Foundation of Elegance",
-    heroImage: "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=1920&q=80",
+  icon: Layers,
+  title: "Flooring Solutions",
+  tagline: "Foundation of Elegance",
+  heroImage: "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=1920&q=80",
+
+  seoTitle: "Flooring Services Dubai | Flooring Solutions",
+  seoDescription: "Planning a flooring project in Dubai? Submit your requirements through MR Renovate and connect with suitable flooring professionals for your renovation.",
+  seoKeywords: "flooring services Dubai, flooring companies Dubai, flooring contractors Dubai, floor renovation Dubai, home flooring Dubai, flooring solutions Dubai",
+
+  introTitle: "Flooring Services in",
+  introTitleAccent: "Dubai",
+  ctaText: "Submit Your Flooring Requirements",
     description: [
       "Beautiful floors are the foundation of every well-designed space. We offer a comprehensive range of flooring solutions — from classic marble to modern engineered wood.",
       "Our expert installers ensure precision laying, seamless transitions, and finishes that withstand the test of time and Dubai's unique climate.",
@@ -390,10 +443,18 @@ faqDescription:
     ],
   },
   "landscaping": {
-    icon: TreePine,
-    title: "Landscaping & Outdoor",
-    tagline: "Extend Your Living Space",
-    heroImage: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1920&q=80",
+  icon: TreePine,
+  title: "Landscaping & Outdoor",
+  tagline: "Extend Your Living Space",
+  heroImage: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1920&q=80",
+
+  seoTitle: "Landscaping Services Dubai | Outdoor Renovation",
+  seoDescription: "Planning a landscaping or outdoor renovation project in Dubai? Submit your requirements through MR Renovate and connect with suitable landscaping professionals.",
+  seoKeywords: "landscaping services Dubai, landscaping companies Dubai, landscaping contractors Dubai, garden landscaping Dubai, outdoor renovation Dubai, villa landscaping Dubai",
+
+  introTitle: "Landscaping & Outdoor Services in",
+  introTitleAccent: "Dubai",
+  ctaText: "Submit Your Landscaping Requirements",
     description: [
       "Dubai's climate demands outdoor spaces that are both beautiful and functional. We create stunning landscapes, pool surrounds, and outdoor living areas that extend your home into nature.",
       "From lush garden designs to fully-equipped outdoor kitchens and elegant pergolas — we bring your outdoor vision to life.",
@@ -412,10 +473,18 @@ faqDescription:
     ],
   },
   "general-renovation": {
-    icon: Wrench,
-    title: "General Renovation",
-    tagline: "Complete Transformation",
-    heroImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80",
+  icon: Wrench,
+  title: "General Renovation",
+  tagline: "Complete Transformation",
+  heroImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80",
+
+  seoTitle: "General Renovation Dubai | Renovation Services",
+  seoDescription: "Planning a renovation project in Dubai? Submit your requirements through MR Renovate and connect with suitable renovation professionals for your property.",
+  seoKeywords: "general renovation Dubai, renovation services Dubai, renovation companies Dubai, property renovation Dubai, home renovation Dubai, renovation contractors Dubai",
+
+  introTitle: "General Renovation Services in",
+  introTitleAccent: "Dubai",
+  ctaText: "Submit Your Renovation Requirements",
     description: [
       "When your entire home needs a refresh, our end-to-end renovation service manages everything — from initial concept to final handover.",
       "We coordinate all trades, manage permits, and ensure every aspect of your renovation is delivered on time, on budget, and to the highest standards.",
@@ -439,37 +508,39 @@ const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const service = slug ? serviceData[slug] : null;
 
-  const serviceSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  serviceType: service.title,
-  name: service.title,
-  description: service.description[0],
-  image: service.heroImage,
-  provider: {
-    "@type": "LocalBusiness",
-    name: "Mr Renovate",
-    url: "https://mrrenovate.ae"
-  },
-  areaServed: {
-    "@type": "City",
-    name: "Dubai"
-  },
-  url: `https://mrrenovate.ae/services/${slug}`
-};
-
-  if (!service) return <Navigate to="/services" replace />;
+  if (!service) {
+    return <Navigate to="/services" replace />;
+  }
 
   const Icon = service.icon;
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: service.title,
+    name: service.title,
+    description: service.seoDescription,
+    image: service.heroImage,
+    provider: {
+      "@type": "LocalBusiness",
+      name: "Mr Renovate",
+      url: "https://mrrenovate.ae"
+    },
+    areaServed: {
+      "@type": "City",
+      name: "Dubai"
+    },
+    url: `https://mrrenovate.ae/services/${slug}`
+  };
 
   return (
     <>
       <SEO
-       title={`${service.title} | Home Renovation Dubai | Mr Renovate`}
-       description={service.description[0]}
-       keywords={`${service.title}, Home Renovation Dubai, Home Renovation Company Dubai`}
-        schema={[serviceSchema]}
-     />
+  title={`${service.seoTitle} | Mr Renovate`}
+  description={service.seoDescription}
+  keywords={service.seoKeywords}
+  schema={[serviceSchema]}
+/>
       <Navbar /> 
       <main>
         {/* Hero */}
@@ -497,7 +568,10 @@ const ServiceDetail = () => {
 
       <ScrollReveal>
         <h2 className="text-3xl font-display font-bold text-foreground">
-          Kitchen Renovation Services in <span className="text-accent">Dubai</span>
+         {service.introTitle}{" "}
+         <span className="text-accent">
+           {service.introTitleAccent}
+         </span>
         </h2>
 
         {service.description.map((p, i) => (
@@ -516,7 +590,7 @@ const ServiceDetail = () => {
             className="inline-flex items-center gap-2 mt-8 px-8 py-3 bg-accent text-accent-foreground font-body font-semibold rounded-xl"
           >
             <Phone className="w-4 h-4" />
-            Submit Your Kitchen Renovation Requirements
+              {service.ctaText}
           </motion.div>
         </Link>
       </ScrollReveal>
