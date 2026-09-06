@@ -20,12 +20,12 @@ const serviceData: Record<string, {
 }> = {
   "kitchen-renovation": {
     icon: ChefHat,
-    title: "Kitchen Renovation",
+    title: "Kitchen Renovation Dubai",
     tagline: "The Heart of Your Home, Reimagined",
     heroImage: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920&q=80",
     description: [
-      "Your kitchen is more than a place to cook — it's where memories are made, stories are shared, and families come together. At Mr Renovate, we design kitchens that are as functional as they are beautiful.",
-      "From custom Italian cabinetry to seamless quartz countertops and state-of-the-art smart appliances, every element is chosen with purpose and installed with precision.",
+      "Your kitchen should work for the way you live. Whether you are updating an apartment kitchen, transforming a villa kitchen, or planning a complete kitchen renovation, the right planning can make a significant difference to the final result.",
+      "MR Renovate helps property owners in Dubai submit their kitchen renovation requirements and connect with suitable renovation professionals from its network. You can share your project details, discuss your requirements with the relevant professionals, and move forward with the option that suits your project.",
     ],
     features: ["Custom Cabinetry Design", "Natural Stone Countertops", "Smart Appliance Integration", "Kitchen Island Design", "Under-Cabinet Lighting", "Plumbing & Gas Upgrades", "Ventilation Systems", "Backsplash Design"],
     process: [
@@ -217,7 +217,7 @@ const ServiceDetail = () => {
                 ))}
                 <Link to="/get-started">
                   <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }} className="inline-flex items-center gap-2 mt-8 px-8 py-3 bg-accent text-accent-foreground font-body font-semibold rounded-xl">
-                    <Phone className="w-4 h-4" /> Get Free Quote
+                    <Phone className="w-4 h-4" /> Submit Your Kitchen Renovation Requirements
                   </motion.div>
                 </Link>
               </ScrollReveal>
