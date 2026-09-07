@@ -6,12 +6,48 @@ import { ChefHat, Bath, Paintbrush, Trees, Layers, Home, ArrowRight } from "luci
 import { Link } from "react-router-dom";
 
 const services = [
-  { icon: ChefHat, title: "Kitchen", description: "Connect with a dedicated kitchen renovation specialist or experienced kitchen renovation company to handle your layout redesign, custom cabinetry, island installations, and countertop upgrades across Dubai.", link: "/services/kitchen-renovation" },
-  { icon: Bath, title: "Bathroom", description: "Discover trusted bathroom renovation contractors and companies near you for modern bathroom remodel projects, full sanitary ware installations, waterproofing, and tile upgrades.", link: "/services/bathroom-renovation" },
-  { icon: Layers, title: "Flooring", description: "Source expert flooring professionals for wooden flooring in Dubai, premium engineered wood flooring, resilient SPC flooring, luxury vinyl tile (LVT), and marble restoration.", link: "/services/flooring" },
-  { icon: Paintbrush, title: "Painting", description: "Find professional painting contractors in Dubai offering complete home painting services, interior wall painting service, and premium exterior protective finishes for villas and apartments",  link: "/services/painting-services"},
-  { icon: Trees, title: "Landscaping", description: "Connect with top landscaping companies in Dubai for custom garden landscape design, outdoor living builds, pergola installations, and full villa garden enhancements.", link: "/services/landscaping" },
-  { icon: Home, title: "Full Renovation", description: "Hire an experienced interior remodeling contractor or turnkey home renovation company in Dubai for full house refurbishments, structural alterations, and end-to-end project execution.", link: "/services/general-renovation" },
+  {
+    icon: ChefHat,
+    title: "Kitchen Renovation",
+    description:
+      "Transform your Dubai kitchen with practical layouts, custom cabinetry, kitchen islands, premium countertops, and high-quality finishes.",
+    link: "/services/kitchen-renovation",
+  },
+  {
+    icon: Bath,
+    title: "Bathroom Renovation",
+    description:
+      "Upgrade your bathroom with modern layouts, premium sanitary ware, waterproofing, wall and floor tiling, and contemporary finishes.",
+    link: "/services/bathroom-renovation",
+  },
+  {
+    icon: Layers,
+    title: "Flooring Services",
+    description:
+      "Refresh your interiors with professional flooring installation, including engineered wood, SPC, LVT, and marble restoration.",
+    link: "/services/flooring",
+  },
+  {
+    icon: Paintbrush,
+    title: "Painting Services",
+    description:
+      "Give your villa or apartment a fresh finish with professional interior and exterior painting, surface preparation, and protective coatings.",
+    link: "/services/painting-services",
+  },
+  {
+    icon: Trees,
+    title: "Landscaping Services",
+    description:
+      "Create a beautiful outdoor space with custom landscape design, garden enhancements, pergolas, and outdoor living solutions.",
+    link: "/services/landscaping",
+  },
+  {
+    icon: Home,
+    title: "Full Home Renovation",
+    description:
+      "Transform your entire property with comprehensive renovation services, structural alterations, interior upgrades, and end-to-end project management.",
+    link: "/services/general-renovation",
+  },
 ];
 
 const ServiceCategories = () => {
@@ -54,8 +90,10 @@ const ServiceCategories = () => {
               >
                 <Link to={service.link} className="block group">
                   <div className="relative p-8 rounded-2xl bg-card border border-border hover:border-accent/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-accent/5 overflow-hidden">
+                      
+                
                     {/* Hover gradient */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-accent/0 to-accent/0 group-hover:from-accent/5 group-hover:to-transparent transition-all duration-500" />
+                    <div aria-hidden="true"className="absolute inset-0 bg-gradient-to-br from-accent/0 to-accent/0 group-hover:from-accent/5 group-hover:to-transparent transition-all duration-500"/>
 
                     <div className="relative z-10">
                       <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
@@ -63,10 +101,13 @@ const ServiceCategories = () => {
                       </div>
                       <h3 className="text-xl font-display font-bold text-card-foreground">{service.title}</h3>
                       <p className="mt-2 text-sm text-muted-foreground font-body leading-relaxed">{service.description}</p>
-                      <div className="mt-4 flex items-center gap-1 text-accent font-body font-semibold text-sm">
-                        Learn More
-                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                      </div>
+               <div className="mt-4 flex items-center gap-1 text-accent font-body font-semibold text-sm">
+                  View {service.title}
+                  <ArrowRight
+                  aria-hidden="true"
+                  className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+               />
+               </div>
                     </div>
                   </div>
                 </Link>
