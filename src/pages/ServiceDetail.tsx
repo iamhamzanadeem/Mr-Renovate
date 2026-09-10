@@ -68,7 +68,7 @@ introTitleAccent: string;
     "kitchen renovation Dubai, kitchen renovation in Dubai, Dubai kitchen renovation, kitchen renovation companies in Dubai, kitchen design companies in Dubai, kitchen renovation company",
 
   introTitle: "Kitchen Renovation Services in Dubai",
-  introTitleAccent:"Dubai",
+  
   ctaText: "Submit Your Kitchen Renovation Requirements",
 
   heroImage:
