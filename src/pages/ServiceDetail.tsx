@@ -225,7 +225,7 @@ introTitleAccent: string;
     text: "View Full Kitchen Renovation Cost Breakdown →"
   }
     },
-    
+
     {
       title: "Kitchen Renovation Ideas for Dubai Homes",
 
@@ -645,6 +645,17 @@ const ServiceDetail = () => {
             {paragraph}
           </p>
         ))}
+        {/* Section Action Link */}
+        {section.link && (
+          <div className="mt-6">
+            <a
+              href={section.link.url}
+              className="inline-flex items-center text-primary font-medium hover:underline text-lg"
+            >
+              {section.link.text}
+            </a>
+          </div>
+        )}
       </ScrollReveal>
 
       {section.items && (
