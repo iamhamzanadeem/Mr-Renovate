@@ -33,6 +33,10 @@ introTitleAccent: string;
       title: string;
       desc: string;
     }[];
+    link?: {
+    url: string;
+    text: string;
+  };
   }[];
 
   process: {
@@ -68,6 +72,7 @@ introTitleAccent: string;
     "kitchen renovation Dubai, kitchen renovation in Dubai, Dubai kitchen renovation, kitchen renovation companies in Dubai, kitchen design companies in Dubai, kitchen renovation company",
 
   introTitle: "Kitchen Renovation Services in Dubai",
+  introTitleAccent: "in Dubai", 
   
   ctaText: "Submit Your Kitchen Renovation Requirements",
 
@@ -654,7 +659,7 @@ const ServiceDetail = () => {
             >
               {section.link.text}
             </a>
-          </div>
+          </div> 
         )}
       </ScrollReveal>
 
