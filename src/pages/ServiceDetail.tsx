@@ -210,18 +210,22 @@ introTitleAccent: string;
       ]
     },
 
-    {
-      title: "Looking for Kitchen Design Companies in Dubai?",
+   {
+      title: "How Much Does Kitchen Renovation Cost in Dubai?",
 
       content: [
-        "Kitchen renovation and kitchen design often go hand in hand. Before work begins, it is important to consider how the kitchen will look and function as a complete space.",
+        "The cost of a kitchen renovation in Dubai depends on the scope of work rather than one fixed price.",
 
-        "Depending on your project, you may want to discuss the kitchen layout, cabinet configuration, storage requirements, countertop selection, kitchen island placement, lighting, appliance positioning, backsplash, finishes, colour schemes and overall kitchen style.",
+        "A simple kitchen refresh will have different requirements from a complete renovation involving new cabinetry, countertops, appliances, plumbing, electrical work and layout changes.",
 
-        "If you are searching for kitchen design companies in Dubai, clearly communicating your design preferences and functional requirements can help you find professionals suited to your project."
-      ]
+        "The final cost can be affected by kitchen size, cabinet materials, countertop selection, appliances, plumbing and electrical modifications, flooring, backsplash, lighting, fixtures, demolition and the overall project specifications."
+      ],
+  link: {
+    url: "https://mrrenovate.ae/kitchen-renovation-cost-dubai-in-2026/",
+    text: "View Full Kitchen Renovation Cost Breakdown →"
+  }
     },
-
+    
     {
       title: "Kitchen Renovation Ideas for Dubai Homes",
 
